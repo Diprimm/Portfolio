@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>David Cabrera — Game Designer &amp; Gameplay Programmer</title>
+<title>David Cabrera — Gameplay Programmer &amp; Game Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Allerta&display=swap" rel="stylesheet">
@@ -19,10 +19,10 @@
   <div class="wrap">
     <div class="brand">David Cabrera<span>.</span></div>
     <nav>
-      <ul>
-        <li><a href="#projects">Projects</a></li>    
+      <ul>       
         <!-- <li><a href="#design-work">Design Work</a></li> -->
         <li><a href="#programming">Gameplay Programming</a></li>
+        <li><a href="#projects">Projects</a></li> 
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -48,11 +48,98 @@
       <a href="#contact" class="btn btn-ghost">Get in touch</a>
     </div>
     <div class="hero-tags">
-      <span class="chip">GAME DESIGN</span>
       <span class="chip">GAMEPLAY PROGRAMMING</span>
+      <span class="chip">GAME DESIGN</span> 
       <span class="chip">UNITY</span>
       <span class="chip">C#</span>
     </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GAMEPLAY PROGRAMMING
+     código, shaders, herramientas.
+     ============================================================ -->
+<section id="programming">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Programming</div>
+        <h2>Gameplay Programming</h2>
+      </div>
+    </div>
+
+    <div class="tech-grid">
+
+      <article class="tech-card">
+        <div class="tech-media">
+          <video autoplay muted loop playsinline preload="metadata" poster="ArrowGameplay-poster.jpg">
+            <source src="ArrowGameplay_web.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="tech-body">
+          <h4>Arrow — Pattern &amp; Scoring System</h4>
+          <span class="tech-tag">C# · Unity Input System</span>
+          <p>
+            Goal: reward precise, fast input and increase difficulty based on stages.
+          </p>
+          <p>How it was built:</p>
+          <ul>
+            <li>Each pattern is a list of arrow objects.</li>
+            <li>Each arrow holds an index for the direction it points, and the player's input maps to the same index system.</li>
+            <li>When the input matches the first arrow in the list, that arrow counts as correct and the game moves on to the next one.</li>
+            <li>Difficulty increases as more patterns are completed successfully.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="tech-card">
+        <div class="tech-media">
+          <video autoplay muted loop playsinline preload="metadata" poster="ABTDgameplay2_web.mp4">
+            <source src="ABTDgameplay2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="tech-body">
+          <h4>A Bridge Too Dumb — Object Freezing, Outline Shader & Online Multiplayer integration</h4>
+          <span class="tech-tag">C# · Runtime Physics & Shader · Photon Pun 2</span>
+          <p>
+            Goal: let players build bridges in real time with visual
+            feedback and multiplayer synchronization.
+          </p>
+          <p>How it was built:</p>
+          <ul>
+            <li>Built on Rigidbody physics.</li>
+            <li>When one object gets close enough to another, they snap together and freeze in place, creating the illusion that they're connected.</li>
+            <li>PunRCP callbacks where used in order to execute the call of freezing for all users with help of Photon View and Photon Rigidbody View.</li>
+            <li>While an object is within snapping range, its outline turns green to signal that it can be attached.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="tech-card">
+        <div class="tech-media">
+          <video autoplay muted loop playsinline preload="metadata" poster="ShipVideo2-poster.jpg">
+            <source src="ShipVideo2_web.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="tech-body">
+          <h4>VortexGear — Ship mobility mechanics test</h4>
+          <span class="tech-tag">C# · Runtime Physics & Input System</span>
+          <p>
+            Goal: build ship-control mechanics with a good game feel.
+          </p>
+          <p>How it was built:</p>
+          <ul>
+            <li>A quick, basic prototype built with Rigidbody physics.</li>
+            <li>Ship controls handled with Unity's New Input System.</li>
+            <li>A full-screen speed shader to sell the feeling of speed.</li>
+            <li>Camera shake to reinforce the sense of velocity.</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+
   </div>
 </section>
 
@@ -72,7 +159,7 @@
 
       <article class="cart">
         <div class="cart-media">
-          <img src="ArrowBANNER.png">
+          <img src="ArrowBANNER.png" alt="Banner Arrow">
         </div>
         <div class="cart-body">
           <h3>Arrow</h3>
@@ -83,7 +170,7 @@
           </div>
           <p>
             Arrow is a simple game of reflexes and coordination. Hit the
-            pattern in the correct order to score points. Sounds easy —
+            pattern in the correct order to score points. Sounds easy,
             but watch out, it can get chaotic fast.
           </p>
           <div class="cart-links">
@@ -94,10 +181,10 @@
 
       <article class="cart">
         <div class="cart-media">
-          <img src="ABTDbanner.png">
+          <img src="ABTDbanner.png" alt="Banner A Bridge Too Dumb">
         </div>
         <div class="cart-body">
-          <h3>A bridge too dumb</h3>
+          <h3>A Bridge Too Dumb</h3>
           <div class="cart-meta">
             <span>Unity</span>
             <span>Programmer & Systems Designer</span>
@@ -121,7 +208,7 @@
 
       <article class="cart">
         <div class="cart-media">
-          <img src="goshiBanner.png">
+          <img src="goshiBanner.png" alt="Banner Goshi Goloshi">
         </div>
         <div class="cart-body">
           <h3>Goshi Goloshi</h3>
@@ -141,7 +228,33 @@
              Team Members: Yazmin Martinez, Vicente Toledo, David Cabrera (me)
           </p>
           <div class="cart-links">
-            <a href="#">Not available yet! →</a>
+            <p>Coming soon</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="cart">
+        <div class="cart-media">
+          <img src="MTDimage.png" alt="Meant To Die menu image">
+        </div>
+        <div class="cart-body">
+          <h3>Meant To Die</h3>
+          <div class="cart-meta">
+            <span>Unity</span>
+            <span>Generalist Programmer / Game Designer</span>
+            <span>2023</span>
+          </div>
+          <p>
+            Meant To Die is an analog horror game with a deep story. Inspired by the classic visuals of the PS1 era, Meant To Die
+            attempts to draw the player into Jacob's story and uncover the reason behind his hallucinations.
+          </p>
+
+          <p>
+
+             Team Members: Benjamin Bravo, Martin Zuniga, David Cabrera (me)
+          </p>
+          <div class="cart-links">
+            <p>Not available fow download</p>
           </div>
         </div>
       </article>
@@ -202,92 +315,7 @@
 
 ============================================================ -->
 
-<!-- ============================================================
-     GAMEPLAY PROGRAMMING
-     código, shaders, herramientas.
-     ============================================================ -->
-<section id="programming">
-  <div class="wrap">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">Programming</div>
-        <h2>Gameplay Programming</h2>
-      </div>
-    </div>
 
-    <div class="tech-grid">
-
-      <article class="tech-card">
-        <div class="tech-media">
-          <video autoplay muted loop playsinline>
-            <source src="ArrowGameplay.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="tech-body">
-          <h4>Arrow — Pattern &amp; Scoring System</h4>
-          <span class="tech-tag">C# · Unity Input System</span>
-          <p>
-            Goal: reward precise, fast input without punishing small timing
-            errors too harshly.
-          </p>
-          <p>How it was built:</p>
-          <ul>
-            <li>Each pattern is a list of arrow objects.</li>
-            <li>Each arrow holds an index for the direction it points, and the player's input maps to the same index system.</li>
-            <li>When the input matches the first arrow in the list, that arrow counts as correct and the game moves on to the next one.</li>
-            <li>Difficulty increases as more patterns are completed successfully.</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="tech-card">
-        <div class="tech-media">
-          <video autoplay muted loop playsinline>
-            <source src="ABTDgameplay.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="tech-body">
-          <h4>A Bridge Too Dumb — Object Freezing & Outline Shader</h4>
-          <span class="tech-tag">C# · Runtime Physics & Shader</span>
-          <p>
-            Goal: let players build bridges in real time with visual
-            feedback.
-          </p>
-          <p>How it was built:</p>
-          <ul>
-            <li>Built on Rigidbody physics.</li>
-            <li>When one object gets close enough to another, they snap together and freeze in place, creating the illusion that they're connected.</li>
-            <li>While an object is within snapping range, its outline turns green to signal that it can be attached.</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="tech-card">
-        <div class="tech-media">
-          <video autoplay muted loop playsinline>
-            <source src="ShipVideo2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="tech-body">
-          <h4>VortexGear — Ship movility mechanics test</h4>
-          <span class="tech-tag">C# · Runtime Physics & Input System</span>
-          <p>
-            Goal: build ship-control mechanics with a good game feel.
-          </p>
-          <p>How it was built:</p>
-          <ul>
-            <li>A quick, basic prototype built with Rigidbody physics.</li>
-            <li>Ship controls handled with Unity's New Input System.</li>
-            <li>A full-screen speed shader to sell the feeling of speed.</li>
-            <li>Camera shake to reinforce the sense of velocity.</li>
-          </ul>
-        </div>
-      </article>
-
-    </div>
-
-  </div>
-</section>
 
 <section id="achievements" class="alt">
   <div class="wrap">
@@ -300,6 +328,22 @@
     </div>
 
     <div class="achv-grid">
+
+      <div class="achv-item">
+        <div class="achv-media achv-media--multi">
+          <img src="CGS1.jpg" alt="Chile Games Showcase image 1">
+          <img src="CGS2.jpg" alt="Chile Games Showcase image 2">
+        </div>
+        <div class="achv-body">
+          <span class="achv-date">2026</span>
+          <h4>Chile Games Showcase 2026</h4>
+          <span class="achv-role">Role: Developer & Exhibitor</span>
+          <p>
+            My team and I exhibited "A Bridge Too Dumb" at Chile Games Showcase, a place where a bunch of
+            Chilean developers gathered to showcase their games.         
+          </p>
+        </div>
+      </div>
 
       <div class="achv-item">
         <div class="achv-media">
@@ -317,8 +361,7 @@
           </p>
         </div>
       </div>
-
-
+      
       <div class="achv-item">
         <div class="achv-media achv-media--multi">
           <img src="Festigame2024.jpg" alt="Team at the event">
@@ -341,23 +384,6 @@
 
       <div class="achv-item">
         <div class="achv-media achv-media--multi">
-          <img src="Expogame2023.jpg" alt="Presenting at Expogame 2023">
-          <img src="expo2023_2.jpg" alt="Presenting at Expogame 2023">
-        </div>
-        <div class="achv-body">
-          <span class="achv-date">2023</span>
-          <h4>Expogame Chile 2023</h4>
-          <span class="achv-role">Role: Exhibitor</span>
-          <p>
-            My first time exhibiting a game at an event. We showed the
-            first vertical slice of "Meant to Die", and a huge number of
-            people tried it out.
-          </p>
-        </div>
-      </div>
-
-      <div class="achv-item">
-        <div class="achv-media achv-media--multi">
           <img src="GGJbanner.jpg" alt="GGJ banner">
           <img src="Bubble.png" alt="Bubble Ascend Page">
         </div>
@@ -373,18 +399,20 @@
         </div>
       </div>
 
+
       <div class="achv-item">
         <div class="achv-media achv-media--multi">
-          <img src="CGS1.jpg" alt="Chile Games Showcase image 1">
-          <img src="CGS2.jpg" alt="Chile Games Showcase image 2">
+          <img src="Expogame2023.jpg" alt="Presenting at Expogame 2023">
+          <img src="expo2023_2.jpg" alt="Presenting at Expogame 2023">
         </div>
         <div class="achv-body">
-          <span class="achv-date">2026</span>
-          <h4>Chile Games Showcase 2026</h4>
-          <span class="achv-role">Role: Developer & Exhibitor</span>
+          <span class="achv-date">2023</span>
+          <h4>Expogame Chile 2023</h4>
+          <span class="achv-role">Role: Exhibitor</span>
           <p>
-            My team and I exhibit "A Bridge Too Dumb" at Chile Games Showcase, a place where a bunch of
-            chilean devs reunited to showcase their games.         
+            My first time exhibiting a game at an event. We showed the
+            first vertical slice of "Meant to Die", and a huge number of
+            people tried it out.
           </p>
         </div>
       </div>
@@ -408,17 +436,26 @@
     <div class="about-grid">
       <div class="about-text">
         <p>
-          Hi, I'm David Cabrera. So far, most of the projects I've worked on
-          have been university projects, aside from Arrow and a few
-          forgotten prototypes. I've always loved the "old-school" feel of
+          Hi, I'm David Cabrera. Most of my work includes university projects and titles likes Arrow, alongside dedicated hands-on experimentation in Unity with C#.
+          Through these projects, I've developed core gameplay systems, including custom Character Controllers, physics mechanics, Shaders Graph effects, and smooth
+          animation blending. I've always loved the "old-school" feel of
           classic videogames, and I'm motivated to start making games with
           that same vibe.
         </p>
         <p>
           I'm currently studying Virtual Reality Engineering and Digital
-          Game Design at UBO University (Chile), and I'm looking for a
+          Game Design at Universidad Bernardo O'Higgins (UBO), and I'm looking for a
           professional internship.
         </p>
+
+          <div class="skills-block">
+          <h4>Programming</h4>
+          <div class="chip-row">
+            <span class="chip">Unity</span>
+            <span class="chip">C#</span>
+            <span class="chip">Shader Graph</span>
+            <span class="chip">Rigidbody Physics</span>
+          </div>
 
         <div class="skills-block">
           <h4>Design</h4>
@@ -426,15 +463,9 @@
             <span class="chip">Game mechanics</span>
             <span class="chip">Systems design</span>
             <span class="chip">Prototyping</span>
-            <span class="chip">Balancing</span>
           </div>
         </div>
-        <div class="skills-block">
-          <h4>Programming</h4>
-          <div class="chip-row">
-            <span class="chip">Unity</span>
-            <span class="chip">C#</span>
-          </div>
+
         </div>
       </div>
     </div>
@@ -451,12 +482,11 @@
       <p>Open to freelance projects, game jam collaborations,
       and team opportunities.</p>
       <div class="contact-links">
-        <span>Email: david4dev.dmd@gmail.com</span>      
-        <span>Instagram: david4dev.dmd</span>
-        <span>Discord: diprimm</span>
-        <p>
-         <a href="https://diprimm.itch.io/">itch.io</a>
-        </p>    
+        <span>Email: david4dev.dmd@gmail.com</span>
+        <span><a href="linkedin.com/in/david-cabrera-valdivia-7a1a01399">LinkedIn</a></span>
+        <span><a href="https://diprimm.itch.io/">itch.io</a></span>      
+        <span><a href="https://www.instagram.com/david4dev.dmd/    ">Instagram</a></span>
+        <span>Discord: diprimm</span>      
       </div>
     </div>
   </div>
