@@ -35,7 +35,17 @@
      HERO
      ============================================================ -->
 <section class="hero">
-  <div class="wrap">
+
+  <!-- Video de fondo (se ve desenfocado). Reemplaza "hero-bg.mp4" y
+       "hero-bg-poster.jpg" por tus archivos. Mientras no existan,
+       se muestra solo el fondo de color. -->
+  <div class="hero-bg">
+    <video autoplay muted loop playsinline preload="metadata" poster="hero-bg-poster.jpg">
+      <source src="carrusel_gameplays_comp.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="wrap hero-content">
     <h1>Hello there, <em>Welcome to my portfolio.</em></h1>
     <p class="lead">
       I'm David Cabrera, a gameplay programmer and game designer. I work on
@@ -43,15 +53,19 @@
       portfolio holds my current projects and keeps growing with every new
       prototype I finish.
     </p>
+
+    <div class="hero-tags">
+      <span class="chip">GAMEPLAY PROGRAMMING</span>
+      <span class="chip">GAME DESIGN</span>
+      <span class="chip">UNITY</span>
+      <span class="chip">C#</span>
+    </div>
+
+    <div class="hero-divider"></div>
+
     <div class="cta-row">
       <a href="#projects" class="btn btn-primary">View projects</a>
       <a href="#contact" class="btn btn-ghost">Get in touch</a>
-    </div>
-    <div class="hero-tags">
-      <span class="chip">GAMEPLAY PROGRAMMING</span>
-      <span class="chip">GAME DESIGN</span> 
-      <span class="chip">UNITY</span>
-      <span class="chip">C#</span>
     </div>
   </div>
 </section>
@@ -485,15 +499,32 @@
       <h2>Let's Talk</h2>
       <p>Open to freelance projects, game jam collaborations,
       and team opportunities.</p>
-      <div class="contact-links">
-        <span>Email: david4dev.dmd@gmail.com</span>
-        <span><a href="https://www.linkedin.com/in/david-cabrera-valdivia-7a1a01399">LinkedIn</a></span>
-        <span><a href="https://github.com/Diprimm">GitHub</a></span>
-        <span><a href="https://diprimm.itch.io/">itch.io</a></span>      
-        <span><a href="https://www.instagram.com/david4dev.dmd/    ">Instagram</a></span>
-        <span>Discord: diprimm</span>      
+
+      <p>david4dev.dmd@gmail.com</p>
+      <div class="contact-main">
+        <a class="contact-btn" href="mailto:david4dev.dmd@gmail.com?subject=Portfolio%20contact">
+          <span class="contact-btn-icon"><img src="mailicon.png" alt="mail icon"></span>
+          <span>Send Email</span>
+        </a>
+        <a class="contact-btn" href="https://www.linkedin.com/in/david-cabrera-valdivia-7a1a01399" target="_blank" rel="noopener noreferrer">
+          <span class="contact-btn-icon"><img src="LInincon.png" alt="linkedin icon"></span>
+          <span>LinkedIn</span>
+        </a>
       </div>
+
+      <div class="contact-social">
+        <a class="social-circle" href="https://www.instagram.com/david4dev.dmd/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+          <img src="IGicon.png" alt="IG icon">
+        </a>
+        <a class="social-circle" href="https://diprimm.itch.io/" target="_blank" rel="noopener noreferrer" aria-label="itch.io" title="itch.io">
+          <img src="itchIcon.png" alt="itch.io icon">
+        </a>
+        <a class="social-circle" href="https://github.com/Diprimm" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+          <img src="githubicon.png" alt="github icon">
+        </a>
+      </div>   
     </div>
+    
   </div>
 </section>
 
