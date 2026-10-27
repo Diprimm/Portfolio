@@ -4,7 +4,7 @@
   --surface:       #1c1917; 
   --surface-line:  #38241b; 
   --text:          #ffffff; 
-  --text-dim:      #cccccc; 
+  --text-dim:      #d9d9d9; 
   --accent:        #ff8244; 
   --accent-2:      #ffa040; 
   --accent-3:      #ff2908; 
@@ -115,7 +115,7 @@ header.site-nav{
 .hero p.lead{
   color:var(--text-dim);
   font-size:1.1rem;
-  max-width:56ch;
+  max-width:70ch;
   margin-bottom:32px;
 }
 .hero .cta-row{
